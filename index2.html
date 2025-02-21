@@ -15,8 +15,8 @@
         }
 
         .holo-panel {
-            width: 400px; /* 面板宽度 */
-            height: 200px; /* 面板高度 */
+            width: fit-content; /* 根据内容自动调整宽度 */
+            height: 200px; /* 固定高度 */
             border: 1px solid rgba(0, 0, 0, 1); /* 黑色边框 */
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 黑色阴影 */
@@ -29,7 +29,7 @@
             text-transform: uppercase;
             position: relative; /* 改为相对定位 */
             animation: wobble 3s infinite ease-in-out; /* 添加晃动动画 */
-            overflow: hidden; /* 确保图片不超出容器 */
+            overflow: hidden; /* 确保内容不超出容器 */
         }
 
         @keyframes wobble {
@@ -40,9 +40,8 @@
 
         .holo-panel img {
             width: 100%; /* 图片宽度铺满容器 */
-            height: 100%; /* 图片高度铺满容器 */
+            height: auto; /* 高度自适应，保持比例 */
             object-fit: cover; /* 保持图片比例，并覆盖整个容器 */
-            /*object-position: center; !* 确保图片居中显示 *!*/
         }
     </style>
 </head>
