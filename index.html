@@ -14,24 +14,24 @@
             height: 100vh;
             overflow: hidden;
         }
-        .holo-panel {
-            width: 400px;
-            height: 200px;
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 255, 0.4);
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-            backdrop-filter: blur(8px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            color: cyan;
-            text-transform: uppercase;
-            position: absolute;
-            transform: perspective(600px) rotateY(-10deg) rotateX(5deg);
-            animation: wobble 3s infinite ease-in-out;
-        }
+.holo-panel {
+    width: 400px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.7); /* 白色背景，透明度70% */
+    border: 1px solid rgba(0, 0, 0, 1); /* 黑色边框 */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 黑色阴影 */
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #6F4E37; /* 咖啡色字体 */
+    text-transform: uppercase;
+    position: absolute;
+    transform: perspective(600px) rotateY(-10deg) rotateX(5deg);
+    animation: wobble 3s infinite ease-in-out;
+}
 
         @keyframes wobble {
             0% { transform: perspective(600px) rotateY(-20deg) rotateX(5deg); }
