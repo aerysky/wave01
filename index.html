@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斜向內+晃動 UI</title>
+    <style>
+        body {
+          background: radial-gradient(circle, #111 10%, #000 90%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .holo-panel {
+            width: 400px;
+            height: 200px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: cyan;
+            text-transform: uppercase;
+            position: absolute;
+            transform: perspective(600px) rotateY(-10deg) rotateX(5deg);
+            animation: wobble 3s infinite ease-in-out;
+        }
+
+        @keyframes wobble {
+            0% { transform: perspective(600px) rotateY(-20deg) rotateX(5deg); }
+            50% { transform: perspective(600px) rotateY(-8deg) rotateX(6deg); }
+            100% { transform: perspective(600px) rotateY(-20deg) rotateX(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="holo-panel">測試</div>
+</body>
+</html>
