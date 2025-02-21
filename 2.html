@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斜向內+晃動 UI</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0); /* 设置为透明 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .holo-panel {
+            width: 80%; /* 根据内容自动调整宽度，最大占据 80% 的屏幕宽度 */
+            max-width: 800px; /* 限制最大宽度，避免过宽 */
+            height: 80vh; /* 根据内容自动调整高度，最大占据 80% 的屏幕高度 */
+            max-height: 600px; /* 限制最大高度，避免过高 */
+            border: 1px solid rgba(0, 0, 0, 1); /* 黑色边框 */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 黑色阴影 */
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #6F4E37; /* 咖啡色字体 */
+            text-transform: uppercase;
+            position: relative; /* 改为相对定位 */
+            animation: wobble 3s infinite ease-in-out; /* 添加晃动动画 */
+            overflow: hidden; /* 确保内容不超出容器 */
+        }
+
+        @keyframes wobble {
+            0% { transform: perspective(600px) rotateY(-20deg) rotateX(5deg); }
+            50% { transform: perspective(600px) rotateY(-8deg) rotateX(6deg); }
+            100% { transform: perspective(600px) rotateY(-20deg) rotateX(5deg); }
+        }
+
+        .holo-panel iframe {
+            width: 100%; /* iframe 宽度铺满容器 */
+            height: 100%; /* iframe 高度铺满容器 */
+            border: none; /* 移除 iframe 边框 */
+        }
+    </style>
+</head>
+<body>
+    <div class="holo-panel">
+        <iframe src="https://forum.gamer.com.tw/C.php?bsn=5786&snA=169765"></iframe>
+    </div>
+</body>
+</html>
